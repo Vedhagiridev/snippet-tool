@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snippet Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="dark">
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>⚡ Snippet Pro</h2>
+
+    <div class="menu">
+      <p>EXPLORER</p>
+      <button onclick="filterFolder('Frontend')">📂 Frontend</button>
+      <button onclick="filterFolder('Backend')">📂 Backend</button>
+      <button onclick="filterFolder('DSA')">📂 DSA</button>
+      <button onclick="display()">🏠 Home</button>
+    </div>
+
+    <div class="menu">
+      <p>TOOLS</p>
+      <button onclick="showFavorites()">⭐ Favorites</button>
+      <button onclick="showDashboard()">📊 Dashboard</button>
+      <button onclick="showActivity()">🕒 Activity</button>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <div class="top">
+      <input id="search" placeholder="🔍 Search...">
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- FORM -->
+    <div class="card form">
+
+      <div class="input-row">
+        <input id="title" placeholder="💡 Title">
+        <select id="category">
+          <option>Frontend</option>
+          <option>Backend</option>
+          <option>DSA</option>
+        </select>
+        <input id="tags" placeholder="#tags">
+      </div>
+
+      <textarea id="code" placeholder="Paste code..."></textarea>
+
+      <div class="btn-group">
+        <button id="addBtn">➕ Add</button>
+        <button onclick="clearForm()">🧹 Clear</button>
+        <button onclick="exportData()">📤 Export</button>
+      </div>
+
+    </div>
+
+    <!-- ✅ IMPORTANT -->
+    <div id="content"></div>
+
+    <footer class="footer">
+  <p>© 2026 Developed by Sharmili V🍂</p>
+</footer>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

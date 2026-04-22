@@ -1,0 +1,17 @@
+<body>
+  <div id="view"></div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const data = params.get("data");
+
+if(data){
+  const s = JSON.parse(atob(data));
+
+  document.getElementById("view").innerHTML = `
+    <h2>${s.title}</h2>
+    <pre>${s.code}</pre>
+  `;
+}
+</script>
+</body>
